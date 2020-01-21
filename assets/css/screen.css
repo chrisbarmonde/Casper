@@ -2089,6 +2089,16 @@ Usage (In Ghost editor):
     margin: 0 0 20px 20px;
 }
 
+.post-full-content .kg-bandcamp-left {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.post-full-content .kg-bandcamp-right {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
 .post-full-content h1 + figure,
 .post-full-content h2 + figure,
 .post-full-content h3 + figure,
