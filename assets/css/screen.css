@@ -2099,6 +2099,15 @@ Usage (In Ghost editor):
     margin: 0 0 20px 20px;
 }
 
+.review-inline {
+    margin: 60px 0;
+}
+
+.review-inline:nth-child(even) .kg-bandcamp-left {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
 .post-full-content h1 + figure,
 .post-full-content h2 + figure,
 .post-full-content h3 + figure,
