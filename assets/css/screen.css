@@ -2103,7 +2103,12 @@ Usage (In Ghost editor):
     margin: 60px 0;
 }
 
-.review-inline:nth-child(even) .kg-bandcamp-left {
+.review-inline:first-child {
+    margin-top: 0;
+}
+
+.review-inline:nth-child(even) .kg-bandcamp-left,
+.post-full-content .review-inline:nth-child(even) .figure.kg-width-left {
     float: right;
     margin: 0 0 20px 20px;
 }

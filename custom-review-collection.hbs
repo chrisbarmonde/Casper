@@ -78,6 +78,9 @@ into the {body} of the default.hbs template --}}
 
             <section class="post-full-content">
                 <div class="post-content">
+                    {{content}}
+                </div>
+                <div class="post-content">
                     {{#get "posts" filter="tag:{{primary_tag.slug}}" limit="all" order="asc"}}
                         {{#foreach posts}}
                             {{^has id=../../id}}
