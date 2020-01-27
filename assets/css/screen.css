@@ -2108,7 +2108,7 @@ Usage (In Ghost editor):
 }
 
 .review-inline:nth-child(even) .kg-bandcamp-left,
-.post-full-content .review-inline:nth-child(even) .figure.kg-width-left {
+.post-full-content .review-inline:nth-child(even) figure.kg-width-left {
     float: right;
     margin: 0 0 20px 20px;
 }
