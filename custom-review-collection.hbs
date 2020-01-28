@@ -85,9 +85,9 @@ into the {body} of the default.hbs template --}}
                         {{#foreach posts}}
                             {{^has id=../../id}}
                                 <div class="review-inline">
-                                    <p>
+                                    <h2 class="review-inline__title">
                                         <a href="{{url}}">{{title}}</a>
-                                    </p>
+                                    </h2>
                                     {{content}}
                                 </div>
                             {{/has}}

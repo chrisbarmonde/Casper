@@ -1,4 +1,19 @@
-<article class="post-card {{post_class}} {{#unless feature_image}}no-image{{else}}{{#is "home"}}{{#has index="nth:6"}}post-card-large{{/has}}{{/is}}{{/unless}}">
+<!--<article class="post-card {{post_class}} {{#unless feature_image}}no-image{{else}}{{#is "home"}}{{#has index="nth:6"}}post-card-large{{/has}}{{/is}}{{/unless}}">-->
+<article class="post-card {{post_class}} {{#unless feature_image}}no-image{{/unless}}{{#if featured}} post-card-large{{/if}}">
+    {{#is "home"}}
+        {{#if featured}}
+            <div class="post-card-bg"></div>
+        {{/if}}
+    {{/is}}
+    {{#unless featured}}
+        {{#if primary_tag}}
+            {{#primary_tag}}
+                <div class="post-card-primary-tag">
+                    <a href="{{url}}">{{name}}</a>
+                </div>
+            {{/primary_tag}}
+        {{/if}}
+    {{/unless}}
 
     {{#if feature_image}}
     <a class="post-card-image-link" href="{{url}}">
@@ -21,11 +36,6 @@
         <a class="post-card-content-link" href="{{url}}">
 
             <header class="post-card-header">
-                {{#if primary_tag}}
-                    {{#primary_tag}}
-                    <div class="post-card-primary-tag">{{name}}</div>
-                    {{/primary_tag}}
-                {{/if}}
                 <h2 class="post-card-title">{{title}}</h2>
             </header>
 
