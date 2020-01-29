@@ -81,7 +81,7 @@ into the {body} of the default.hbs template --}}
                     {{content}}
                 </div>
                 <div class="post-content">
-                    {{#get "posts" filter="tag:{{primary_tag.slug}}" limit="all" order="asc"}}
+                    {{#get "posts" filter="tag:{{primary_internal_tag.slug}}" limit="all" order="asc"}}
                         {{#foreach posts}}
                             {{^has id=../../id}}
                                 <div class="review-inline">
