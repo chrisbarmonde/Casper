@@ -651,7 +651,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     right: 0;
     bottom: 0;
     left: 0;
-    background: #000 url(/assets/image/featured-tornado.jpg) no-repeat;
 }
 
 .featured .post-card-bg::before {
@@ -664,6 +663,21 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     z-index: 2;
     display: block;
     background: rgba(0,0,0,0.18);
+}
+
+.featured:nth-child(3n+1) .post-card-bg {
+    background: #000 url(/assets/image/featured-tornado.jpg) no-repeat;
+    background-position: -70px -110px;
+}
+
+.featured:nth-child(3n+2) .post-card-bg {
+    background: #000 url(/assets/image/featured-lightning.jpg) no-repeat;
+    background-position: 150px center;
+}
+
+.featured:nth-child(3n+3) .post-card-bg {
+    background: #000 url(/assets/image/featured-wave.jpg) no-repeat;
+    background-position: 100px 0;
 }
 
 .post-feed .post-card.featured .post-card-content,
@@ -996,8 +1010,19 @@ make sure this only happens on large viewports / desktop-ish devices.
         font-size: 2.25rem;
     }
 
-    .featured .post-card-bg {
-        background-position: -600px -150px;
+    .featured:nth-child(3n+1) .post-card-bg {
+        background-position: -200px 50px;
+        background-size: cover;
+    }
+
+    .featured:nth-child(3n+2) .post-card-bg {
+        background-position: -100px 0;
+        background-size: cover;
+    }
+
+    .featured:nth-child(3n+3) .post-card-bg {
+        background-position: 0 100px;
+        background-size: cover;
     }
 }
 
