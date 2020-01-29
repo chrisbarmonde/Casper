@@ -51,6 +51,26 @@ body {
 }
 
 
+@media (min-width: 500px) {
+    .desktop-only {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+}
+
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
 
@@ -3162,5 +3182,32 @@ Usage (In Ghost editor):
 
     .subscribe-form .success .message-success {
         color: color(var(--green) l(+5%) s(-5%));
+    }
+}
+
+
+.page-release-dates .desktop-only {
+    margin-left: -50px;
+}
+
+@media (max-width: 768px) {
+    .page-release-dates .site-main.outer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page-release-dates .post-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-release-dates iframe {
+        width: 100vw;
+    }
+
+    .page-release-dates .post-full-header {
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 }
