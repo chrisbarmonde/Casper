@@ -676,6 +676,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .featured:nth-child(3n+3) .post-card-bg {
+    background: #000 url(/assets/image/featured-asteroid.jpg) no-repeat;
+    background-position: -100px 0;
+}
+
+.featured:nth-child(3n+4) .post-card-bg {
     background: #000 url(/assets/image/featured-wave.jpg) no-repeat;
     background-position: 100px 0;
 }
@@ -1021,6 +1026,11 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .featured:nth-child(3n+3) .post-card-bg {
+        background-position: -280px 90px;
+        background-size: cover;
+    }
+
+    .featured:nth-child(3n+4) .post-card-bg {
         background-position: 0 100px;
         background-size: cover;
     }
