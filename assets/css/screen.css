@@ -2209,24 +2209,24 @@ Usage (In Ghost editor):
 
 .post-full-content figure.kg-width-left {
     float: left;
-    width: 60%;
-    margin: 0 20px 20px 0;
+    max-width: 350px;
+    margin: 8px 20px 18px 0;
 }
 
 .post-full-content figure.kg-width-right {
     float: right;
-    width: 60%;
-    margin: 0 0 20px 20px;
+    max-width: 350px;
+    margin: 8px 0 18px 20px;
 }
 
 .post-full-content .kg-bandcamp-left {
     float: left;
-    margin: 0 20px 20px 0;
+    margin: 8px 20px 18px 0;
 }
 
 .post-full-content .kg-bandcamp-right {
     float: right;
-    margin: 0 0 20px 20px;
+    margin: 8px 0 18px 20px;
 }
 
 .review-inline {
@@ -2241,7 +2241,7 @@ Usage (In Ghost editor):
 .review-inline:nth-child(even) .kg-bandcamp-left,
 .post-full-content .review-inline:nth-child(even) figure.kg-width-left {
     float: right;
-    margin: 0 0 20px 20px;
+    margin: 8px 0 18px 20px;
 }
 
 .review-inline__title {
@@ -2513,6 +2513,7 @@ Usage (In Ghost editor):
         margin: 0 0 10px 0;
         text-align: center;
         width: auto;
+        max-width: none;
     }
 }
 
