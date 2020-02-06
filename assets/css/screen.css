@@ -626,6 +626,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .post-card {
     position: relative;
     flex: 1 1 301px;
+    max-width: 360px;
     display: flex;
     flex-direction: column;
     /* overflow: hidden; */
@@ -642,7 +643,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 0 20px 0 0;
     box-shadow: 0 2px 18px 0 rgba(0,0,0,0.5);
     border-radius: 5px;
-
+    max-width: none;
 }
 
 .featured .post-card-bg {
@@ -665,22 +666,22 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     background: rgba(0,0,0,0.18);
 }
 
-.featured:nth-child(3n+1) .post-card-bg {
+.featured:nth-child(4n+1) .post-card-bg {
     background: #000 url(/assets/image/featured-tornado.jpg) no-repeat;
-    background-position: -70px -110px;
+    background-position: bottom right;
 }
 
-.featured:nth-child(3n+2) .post-card-bg {
+.featured:nth-child(4n+2) .post-card-bg {
     background: #000 url(/assets/image/featured-lightning.jpg) no-repeat;
     background-position: 150px center;
 }
 
-.featured:nth-child(3n+3) .post-card-bg {
+.featured:nth-child(4n+3) .post-card-bg {
     background: #000 url(/assets/image/featured-asteroid.jpg) no-repeat;
     background-position: -100px 0;
 }
 
-.featured:nth-child(3n+4) .post-card-bg {
+.featured:nth-child(4n+4) .post-card-bg {
     background: #000 url(/assets/image/featured-wave.jpg) no-repeat;
     background-position: 100px 0;
 }
@@ -1015,22 +1016,22 @@ make sure this only happens on large viewports / desktop-ish devices.
         font-size: 2.25rem;
     }
 
-    .featured:nth-child(3n+1) .post-card-bg {
+    .featured:nth-child(4n+1) .post-card-bg {
         background-position: -200px 50px;
         background-size: cover;
     }
 
-    .featured:nth-child(3n+2) .post-card-bg {
+    .featured:nth-child(4n+2) .post-card-bg {
         background-position: -100px 0;
         background-size: cover;
     }
 
-    .featured:nth-child(3n+3) .post-card-bg {
+    .featured:nth-child(4n+3) .post-card-bg {
         background-position: -280px 90px;
         background-size: cover;
     }
 
-    .featured:nth-child(3n+4) .post-card-bg {
+    .featured:nth-child(4n+4) .post-card-bg {
         background-position: 0 100px;
         background-size: cover;
     }
@@ -2584,6 +2585,20 @@ Usage (In Ghost editor):
     opacity: 1.0;
 }
 
+.author-social-link .svg-twitter {
+    fill: #fff;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.author-social-link .svg-bandcamp {
+    fill: #fff;
+    width: 30px;
+    height: 16px;
+    margin-right: 5px;
+}
+
 .author-social-link a {
     color: #fff;
     font-weight: 600;
@@ -2598,13 +2613,12 @@ Usage (In Ghost editor):
 }
 
 .author-social-link {
-    padding: 10px 0;
-}
-
-.author-social-link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin: 0;
     padding: 10px 0;
+
+    text-transform: none;
 }
 
 .author-location + .author-stats:before,
